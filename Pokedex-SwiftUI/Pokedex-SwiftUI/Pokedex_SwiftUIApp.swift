@@ -11,7 +11,7 @@ import SwiftUI
 struct Pokedex_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PokeListCoordinator(network: Application.network).start()
         }
     }
 }
