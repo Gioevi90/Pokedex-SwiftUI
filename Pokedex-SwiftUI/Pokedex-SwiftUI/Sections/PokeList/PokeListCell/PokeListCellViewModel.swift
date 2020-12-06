@@ -6,15 +6,12 @@ class PokeListCellViewModel: Hashable {
     
     let network: NetworkContextProtocol
     let preview: PokePreview
-    
-    var onSelect: (PokePreview) -> Void = { _ in }
-    
+        
     private var request: Request?
     
-    init(network: NetworkContextProtocol, preview: PokePreview, onSelect: @escaping (PokePreview) -> Void) {
+    init(network: NetworkContextProtocol, preview: PokePreview) {
         self.network = network
         self.preview = preview
-        self.onSelect = onSelect
     }
     
     var name: String {
@@ -27,10 +24,6 @@ class PokeListCellViewModel: Hashable {
     
     var placeholderName: String {
         "Placeholder"
-    }
-    
-    func select() {
-        onSelect(preview)
     }
     
     func cancelRequest() {
@@ -48,10 +41,6 @@ class PokeListCellViewModel: Hashable {
             }
         })
         request?.execute()
-    }
-    
-    func onTap() {
-        onSelect(preview)
     }
     
     static func == (lhs: PokeListCellViewModel, rhs: PokeListCellViewModel) -> Bool {

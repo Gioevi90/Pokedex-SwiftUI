@@ -9,13 +9,12 @@ struct PokeListCellView: View {
             Color.white
             VStack {
                 Image.initialize(data: imageData)
-                Text(viewModel.name).font(Font.semibold)
+                Text(viewModel.name).font(Font.semibold(size: 17))
             }
         }
         .cornerRadius(CGFloat.cornerRadius)
         .onReceive(viewModel.statePublisher, perform: stateUpdate(_:))
         .onAppear(perform: { viewModel.loadImage() })
-        .onTapGesture { viewModel.onTap()}
     }
     
     private func stateUpdate(_ state: PokeListCellViewModel.State) {

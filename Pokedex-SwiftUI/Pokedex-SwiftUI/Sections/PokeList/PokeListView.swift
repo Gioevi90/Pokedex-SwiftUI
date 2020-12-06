@@ -14,8 +14,10 @@ struct PokeListView: View {
                     LazyVGrid(columns: [GridItem(spacing: 8, alignment: .center),
                                         GridItem(spacing: 8, alignment: .center)]) {
                         ForEach(viewModel.viewModels, id: \.self) { model in
-                            PokeListCellView(viewModel: model)
-                                .onAppear(perform: { viewModel.loadNext(model: model) })
+                            NavigationLink(destination:  viewModel.showDetail(model)) {
+                                PokeListCellView(viewModel: model)
+                                    .onAppear(perform: { viewModel.loadNext(model: model) })
+                            }
                         }
                     }.padding(.all, 8)
                     ProgressView()
@@ -23,8 +25,9 @@ struct PokeListView: View {
                         .hide(if: !isLoading)
                 }
             }
+            .accentColor(Color.black)
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarTitle(Text("Pokedex"))
+            .navigationBarTitle(Text(viewModel.pageTitle))
         }
         .onReceive(viewModel.statePublisher, perform: stateUpdate(_:))
         .onAppear(perform: { viewModel.load() })
@@ -38,8 +41,6 @@ struct PokeListView: View {
             update(paths)
         case let .error(error):
             onError(error)
-        case let .select(preview):
-            onSelect(preview: preview)
         }
     }
     
@@ -53,9 +54,5 @@ struct PokeListView: View {
     
     private func onError(_ error: Error) {
         isLoading = false
-    }
-    
-    private func onSelect(preview: PokePreview) {
-        print("selecting")
     }
 }

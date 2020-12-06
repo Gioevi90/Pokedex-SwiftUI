@@ -52,6 +52,12 @@
 		2BA155FE257D1B6C00B9EADA /* Image+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA155FD257D1B6C00B9EADA /* Image+Data.swift */; };
 		2BA15603257D1DBE00B9EADA /* CGFloat+Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA15602257D1DBE00B9EADA /* CGFloat+Definitions.swift */; };
 		2BA15608257D4FC300B9EADA /* View+Hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA15607257D4FC200B9EADA /* View+Hide.swift */; };
+		2BA1561B257D531900B9EADA /* PokeDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1560E257D531800B9EADA /* PokeDetailCoordinator.swift */; };
+		2BA1561C257D531900B9EADA /* PokeSlotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA15611257D531800B9EADA /* PokeSlotViewModel.swift */; };
+		2BA1561E257D531900B9EADA /* PokeInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA15614257D531800B9EADA /* PokeInfoViewModel.swift */; };
+		2BA15621257D531900B9EADA /* PokeImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA15618257D531800B9EADA /* PokeImageViewModel.swift */; };
+		2BA15623257D531900B9EADA /* PokeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1561A257D531900B9EADA /* PokeDetailViewModel.swift */; };
+		2BA1562B257D534200B9EADA /* PokeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1562A257D534200B9EADA /* PokeDetailView.swift */; };
 		2BAB133B257D013C00C9F0B5 /* PokeListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAB132F257D013C00C9F0B5 /* PokeListCoordinator.swift */; };
 		2BAB1341257D013C00C9F0B5 /* PokeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAB1339257D013C00C9F0B5 /* PokeListViewModel.swift */; };
 		2BAB1342257D013C00C9F0B5 /* PokeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAB133A257D013C00C9F0B5 /* PokeListView.swift */; };
@@ -126,6 +132,12 @@
 		2BA155FD257D1B6C00B9EADA /* Image+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Data.swift"; sourceTree = "<group>"; };
 		2BA15602257D1DBE00B9EADA /* CGFloat+Definitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Definitions.swift"; sourceTree = "<group>"; };
 		2BA15607257D4FC200B9EADA /* View+Hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Hide.swift"; sourceTree = "<group>"; };
+		2BA1560E257D531800B9EADA /* PokeDetailCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeDetailCoordinator.swift; sourceTree = "<group>"; };
+		2BA15611257D531800B9EADA /* PokeSlotViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeSlotViewModel.swift; sourceTree = "<group>"; };
+		2BA15614257D531800B9EADA /* PokeInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeInfoViewModel.swift; sourceTree = "<group>"; };
+		2BA15618257D531800B9EADA /* PokeImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeImageViewModel.swift; sourceTree = "<group>"; };
+		2BA1561A257D531900B9EADA /* PokeDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeDetailViewModel.swift; sourceTree = "<group>"; };
+		2BA1562A257D534200B9EADA /* PokeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeDetailView.swift; sourceTree = "<group>"; };
 		2BAB132F257D013C00C9F0B5 /* PokeListCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeListCoordinator.swift; sourceTree = "<group>"; };
 		2BAB1339257D013C00C9F0B5 /* PokeListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeListViewModel.swift; sourceTree = "<group>"; };
 		2BAB133A257D013C00C9F0B5 /* PokeListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeListView.swift; sourceTree = "<group>"; };
@@ -180,11 +192,11 @@
 			isa = PBXGroup;
 			children = (
 				2B34DFB1257CFFA20004CEF4 /* Pokedex_SwiftUIApp.swift */,
+				2BA1560C257D52A900B9EADA /* Sections */,
 				2BA155F2257D16E500B9EADA /* Resources */,
 				2BA155B3257D0B9600B9EADA /* Definitions */,
 				2BA155A7257D0B9600B9EADA /* Utils */,
 				2BA15587257D0B5600B9EADA /* Network */,
-				2BAB132E257D00C900C9F0B5 /* PokeList */,
 				2B34DFB5257CFFA30004CEF4 /* Assets.xcassets */,
 				2B34DFBA257CFFA30004CEF4 /* Info.plist */,
 				2B34DFB7257CFFA30004CEF4 /* Preview Content */,
@@ -341,6 +353,60 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		2BA1560C257D52A900B9EADA /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				2BAB132E257D00C900C9F0B5 /* PokeList */,
+				2BA1560D257D52C300B9EADA /* PokeDetail */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		2BA1560D257D52C300B9EADA /* PokeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2BA1560E257D531800B9EADA /* PokeDetailCoordinator.swift */,
+				2BA1561A257D531900B9EADA /* PokeDetailViewModel.swift */,
+				2BA1562A257D534200B9EADA /* PokeDetailView.swift */,
+				2BA1560F257D531800B9EADA /* Views */,
+			);
+			path = PokeDetail;
+			sourceTree = "<group>";
+		};
+		2BA1560F257D531800B9EADA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2BA15610257D531800B9EADA /* PokeSlowView */,
+				2BA15613257D531800B9EADA /* PokeAbilityView */,
+				2BA15616257D531800B9EADA /* PokeImageView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2BA15610257D531800B9EADA /* PokeSlowView */ = {
+			isa = PBXGroup;
+			children = (
+				2BA15611257D531800B9EADA /* PokeSlotViewModel.swift */,
+			);
+			path = PokeSlowView;
+			sourceTree = "<group>";
+		};
+		2BA15613257D531800B9EADA /* PokeAbilityView */ = {
+			isa = PBXGroup;
+			children = (
+				2BA15614257D531800B9EADA /* PokeInfoViewModel.swift */,
+			);
+			path = PokeAbilityView;
+			sourceTree = "<group>";
+		};
+		2BA15616257D531800B9EADA /* PokeImageView */ = {
+			isa = PBXGroup;
+			children = (
+				2BA15618257D531800B9EADA /* PokeImageViewModel.swift */,
+			);
+			path = PokeImageView;
+			sourceTree = "<group>";
+		};
 		2BAB132E257D00C900C9F0B5 /* PokeList */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +561,7 @@
 				2BA155CA257D0B9600B9EADA /* UrlSessionProtocol.swift in Sources */,
 				2BA155C9257D0B9600B9EADA /* Cancellable.swift in Sources */,
 				2BA155BC257D0B9600B9EADA /* Global.swift in Sources */,
+				2BA1562B257D534200B9EADA /* PokeDetailView.swift in Sources */,
 				2BA155A1257D0B5600B9EADA /* NetworkContext.swift in Sources */,
 				2BA155BE257D0B9600B9EADA /* UIWindow+Presenter.swift in Sources */,
 				2BA155A2257D0B5600B9EADA /* NetworkError.swift in Sources */,
@@ -504,7 +571,9 @@
 				2BA155C8257D0B9600B9EADA /* Presenter.swift in Sources */,
 				2BA155FE257D1B6C00B9EADA /* Image+Data.swift in Sources */,
 				2BA15603257D1DBE00B9EADA /* CGFloat+Definitions.swift in Sources */,
+				2BA1561B257D531900B9EADA /* PokeDetailCoordinator.swift in Sources */,
 				2B34DFB2257CFFA20004CEF4 /* Pokedex_SwiftUIApp.swift in Sources */,
+				2BA1561C257D531900B9EADA /* PokeSlotViewModel.swift in Sources */,
 				2BA155BD257D0B9600B9EADA /* MainQueueDispatcher.swift in Sources */,
 				2BAB1342257D013C00C9F0B5 /* PokeListView.swift in Sources */,
 				2BAB133B257D013C00C9F0B5 /* PokeListCoordinator.swift in Sources */,
@@ -512,9 +581,12 @@
 				2BA155A3257D0B5600B9EADA /* NetworkConfiguration.swift in Sources */,
 				2BA1559B257D0B5600B9EADA /* PokeImage.swift in Sources */,
 				2BA155C4257D0B9600B9EADA /* UrlSessionDataTask+Protocol.swift in Sources */,
+				2BA15621257D531900B9EADA /* PokeImageViewModel.swift in Sources */,
 				2BA155DB257D0E8500B9EADA /* PokeListCellViewModel.swift in Sources */,
+				2BA15623257D531900B9EADA /* PokeDetailViewModel.swift in Sources */,
 				2BA155EE257D158800B9EADA /* Font+Definitions.swift in Sources */,
 				2BA155C0257D0B9600B9EADA /* UINavigationController+Present.swift in Sources */,
+				2BA1561E257D531900B9EADA /* PokeInfoViewModel.swift in Sources */,
 				2BA155C3257D0B9600B9EADA /* String+Utils.swift in Sources */,
 				2BA155C7257D0B9600B9EADA /* NetworkConfigurationProtocol.swift in Sources */,
 				2BA15598257D0B5600B9EADA /* PokeDetail.swift in Sources */,
