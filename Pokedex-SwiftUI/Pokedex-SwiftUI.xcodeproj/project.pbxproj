@@ -50,6 +50,8 @@
 		2BA155F8257D16E500B9EADA /* Signika-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA155F5257D16E500B9EADA /* Signika-Regular.ttf */; };
 		2BA155F9257D16E500B9EADA /* Signika-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA155F6257D16E500B9EADA /* Signika-SemiBold.ttf */; };
 		2BA155FE257D1B6C00B9EADA /* Image+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA155FD257D1B6C00B9EADA /* Image+Data.swift */; };
+		2BA15603257D1DBE00B9EADA /* CGFloat+Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA15602257D1DBE00B9EADA /* CGFloat+Definitions.swift */; };
+		2BA15608257D4FC300B9EADA /* View+Hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA15607257D4FC200B9EADA /* View+Hide.swift */; };
 		2BAB133B257D013C00C9F0B5 /* PokeListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAB132F257D013C00C9F0B5 /* PokeListCoordinator.swift */; };
 		2BAB1341257D013C00C9F0B5 /* PokeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAB1339257D013C00C9F0B5 /* PokeListViewModel.swift */; };
 		2BAB1342257D013C00C9F0B5 /* PokeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAB133A257D013C00C9F0B5 /* PokeListView.swift */; };
@@ -122,6 +124,8 @@
 		2BA155F5257D16E500B9EADA /* Signika-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Signika-Regular.ttf"; sourceTree = "<group>"; };
 		2BA155F6257D16E500B9EADA /* Signika-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Signika-SemiBold.ttf"; sourceTree = "<group>"; };
 		2BA155FD257D1B6C00B9EADA /* Image+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Data.swift"; sourceTree = "<group>"; };
+		2BA15602257D1DBE00B9EADA /* CGFloat+Definitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Definitions.swift"; sourceTree = "<group>"; };
+		2BA15607257D4FC200B9EADA /* View+Hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Hide.swift"; sourceTree = "<group>"; };
 		2BAB132F257D013C00C9F0B5 /* PokeListCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeListCoordinator.swift; sourceTree = "<group>"; };
 		2BAB1339257D013C00C9F0B5 /* PokeListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeListViewModel.swift; sourceTree = "<group>"; };
 		2BAB133A257D013C00C9F0B5 /* PokeListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeListView.swift; sourceTree = "<group>"; };
@@ -311,8 +315,10 @@
 			isa = PBXGroup;
 			children = (
 				2BA155E5257D157800B9EADA /* Color+Definitions.swift */,
+				2BA15602257D1DBE00B9EADA /* CGFloat+Definitions.swift */,
 				2BA155ED257D158800B9EADA /* Font+Definitions.swift */,
 				2BA155FD257D1B6C00B9EADA /* Image+Data.swift */,
+				2BA15607257D4FC200B9EADA /* View+Hide.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -497,6 +503,7 @@
 				2BA1559D257D0B5600B9EADA /* PokeAbility.swift in Sources */,
 				2BA155C8257D0B9600B9EADA /* Presenter.swift in Sources */,
 				2BA155FE257D1B6C00B9EADA /* Image+Data.swift in Sources */,
+				2BA15603257D1DBE00B9EADA /* CGFloat+Definitions.swift in Sources */,
 				2B34DFB2257CFFA20004CEF4 /* Pokedex_SwiftUIApp.swift in Sources */,
 				2BA155BD257D0B9600B9EADA /* MainQueueDispatcher.swift in Sources */,
 				2BAB1342257D013C00C9F0B5 /* PokeListView.swift in Sources */,
@@ -512,6 +519,7 @@
 				2BA155C7257D0B9600B9EADA /* NetworkConfigurationProtocol.swift in Sources */,
 				2BA15598257D0B5600B9EADA /* PokeDetail.swift in Sources */,
 				2BA1559A257D0B5600B9EADA /* PokePreview.swift in Sources */,
+				2BA15608257D4FC300B9EADA /* View+Hide.swift in Sources */,
 				2BA155BF257D0B9600B9EADA /* UIViewController+Present.swift in Sources */,
 				2BA155C5257D0B9600B9EADA /* Dispatcher.swift in Sources */,
 				2BA155A0257D0B5600B9EADA /* Request.swift in Sources */,

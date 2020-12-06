@@ -9,6 +9,6 @@ import SwiftUI
 
 extension Image {
     static func initialize(data: Data) -> Image {
-        UIImage(data: data).map(Image.init) ?? Image("placeholder")
+        UIImage(data: data).map(Image.init) ?? Image("Placeholder")
     }
 }

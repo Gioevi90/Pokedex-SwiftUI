@@ -7,6 +7,8 @@ class PokeListViewModel: ObservableObject {
     private let coordinator: PokeListCoordinatorProtocol
     private(set) var viewModels: [PokeListCellViewModel] = []
     private var next: String?
+    
+    var canLoadNext: Bool = false
         
     init(network: NetworkContextProtocol,
          coordinator: PokeListCoordinatorProtocol) {
@@ -25,9 +27,9 @@ class PokeListViewModel: ObservableObject {
         })?.execute()
     }
     
-    func loadNext(_ indexPath: IndexPath) {
+    func loadNext(model: PokeListCellViewModel) {
+        guard model == viewModels.last else { return } 
         guard let next = next else { return }
-        guard indexPath.row == viewModels.count - 1 else { return }
         
         network.getPokemonList(with: next, completion: { [weak self] result in
             switch result {
@@ -49,6 +51,7 @@ class PokeListViewModel: ObservableObject {
                                               preview: $0,
                                               onSelect: { [weak self] in self?.state = .select($0) }) })
         next = result.next
+        canLoadNext = next != nil
         state = .update(paths)
     }
     

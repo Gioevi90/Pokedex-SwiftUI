@@ -50,6 +50,10 @@ class PokeListCellViewModel: Hashable {
         request?.execute()
     }
     
+    func onTap() {
+        onSelect(preview)
+    }
+    
     static func == (lhs: PokeListCellViewModel, rhs: PokeListCellViewModel) -> Bool {
         lhs.preview == rhs.preview
     }
