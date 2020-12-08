@@ -7,7 +7,7 @@ struct PokeInfoView: View {
         HStack() {
             Text(viewModel.title)
                 .font(Font.light(size: 16))
-                .frame(minWidth: 0, maxWidth: .infinity)
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             VStack(alignment: .leading) {
                 ForEach(viewModel.values, id: \.self) {
                     PokeSlotView(viewModel: PokeSlotViewModel(title: $0))

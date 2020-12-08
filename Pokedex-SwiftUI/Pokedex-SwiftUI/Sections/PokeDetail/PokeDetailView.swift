@@ -23,8 +23,11 @@ struct PokeDetailView: View {
                         Text(viewModel.height).font(Font.light(size: 16))
                         Text(viewModel.weight).font(Font.light(size: 16))
                         Text(viewModel.baseExperience).font(Font.light(size: 16))
+                        Color.separator.frame(height: 1).padding(.horizontal, 8)
                         PokeInfoView(viewModel: viewModel.typeViewModel)
+                        Color.separator.frame(height: 1).padding(.horizontal, 8)
                         PokeInfoView(viewModel: viewModel.abilitityViewModel)
+                        Color.separator.frame(height: 1).padding(.horizontal, 8)
                         PokeInfoView(viewModel: viewModel.statViewModel)
                     }
                     .padding(8)
