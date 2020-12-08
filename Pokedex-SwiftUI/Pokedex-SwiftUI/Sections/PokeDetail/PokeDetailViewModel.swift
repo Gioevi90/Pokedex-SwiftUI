@@ -4,7 +4,7 @@ class PokeDetailViewModel: ObservableObject {
     let preview: PokePreview
     let network: NetworkContextProtocol
     
-    private var detail: PokeDetail?
+    @Published private var detail: PokeDetail?
     
     var onUpdate: () -> Void = {}
     var onError: (Error) -> Void = { _ in }

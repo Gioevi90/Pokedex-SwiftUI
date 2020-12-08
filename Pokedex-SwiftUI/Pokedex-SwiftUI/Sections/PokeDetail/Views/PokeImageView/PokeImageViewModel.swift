@@ -4,9 +4,9 @@ class PokeImageViewModel {
     let url: String
     let network: NetworkContextProtocol
     
-    var onError: (Error) -> Void = { _ in }
-    var onSuccess: (Data) -> Void = { _ in }
-    
+    @Published private(set) var state: PokeImageViewModel.State = .loading
+    var statePublisher: Published<PokeImageViewModel.State>.Publisher { $state }
+        
     init(url: String, network: NetworkContextProtocol) {
         self.url = url
         self.network = network
@@ -16,18 +16,18 @@ class PokeImageViewModel {
         network.getPokemonImage(with: url) { [weak self] result in
             switch result {
             case let .failure(error):
-                self?.failure(error)
+                self?.state = .failure(error)
             case let .success(data):
-                self?.success(data: data)
+                self?.state = .success(data)
             }
         }?.execute()
     }
-    
-    private func failure(_ error: Error) {
-        onError(error)
-    }
-    
-    private func success(data: Data) {
-        onSuccess(data)
+}
+
+extension PokeImageViewModel {
+    enum State {
+        case success(Data)
+        case failure(Error)
+        case loading
     }
 }
